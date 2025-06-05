@@ -1,5 +1,11 @@
-controllers:
+home_controllers:
     resource:
-        path: ../src/Controller/
-        namespace: App\Controller
+        path: ../src/Home/Controller/
+        namespace: App\Home\Controller
     type: attribute
+
+#menu_controllers:
+   # resource:
+    #    path: ../src/Menu/Controller/
+     #   namespace: App\Menu\Controller
+    #type: attribute
