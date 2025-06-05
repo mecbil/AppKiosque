@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        body {
+            background-color: #121212;
+            color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .centered {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="centered">
+        <h1>Bienvenue sur la page d'accueil</h1>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {# Tu pourras ajouter tes scripts ici plus tard #}
+{% endblock %}
