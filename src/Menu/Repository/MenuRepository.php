@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repository;
+namespace App\Menu\Repository;
 
 use App\Entity\Menu;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;

@@ -4,8 +4,8 @@ home_controllers:
         namespace: App\Home\Controller
     type: attribute
 
-#menu_controllers:
-   # resource:
-    #    path: ../src/Menu/Controller/
-     #   namespace: App\Menu\Controller
-    #type: attribute
+menu_controllers:
+    resource:
+        path: ../src/Menu/Controller/
+        namespace: App\Menu\Controller
+    type: attribute

@@ -3,16 +3,15 @@
 namespace App\Home\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Routing\Attribute\Route;
 
 final class HomeController extends AbstractController
 {
     #[Route('/', name: 'app_home')]
-    public function index(): Response
+    public function index(): RedirectResponse
     {
-        return $this->render('@home/home/index.html.twig', [
-            'controller_name' => 'HomeController',
-        ]);
+        // Redirige vers la route du menu (ici, j'ai mis 'menu_index' par exemple)
+        return $this->redirectToRoute('menu_index');
     }
 }
