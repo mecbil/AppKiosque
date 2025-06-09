@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Entity;
+namespace App\Menu\Entity;
 
-use App\Repository\MenuRepository;
+use App\Menu\Repository\MenuRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;

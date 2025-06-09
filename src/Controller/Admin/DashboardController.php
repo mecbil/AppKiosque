@@ -3,7 +3,9 @@
 namespace App\Controller\Admin;
 
 use App\Entity\User;
-use App\Entity\Menu;
+use App\Menu\Entity\Menu;
+use App\Controller\Admin\MenuCrudController;
+use App\Controller\Admin\UserCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Attribute\AdminDashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -16,7 +18,6 @@ class DashboardController extends AbstractDashboardController
 {
     public function index(): Response
     {
-        // Redirection automatique vers la liste des utilisateurs à l'ouverture du dashboard
         $adminUrlGenerator = $this->container->get(AdminUrlGenerator::class);
         $url = $adminUrlGenerator->setController(UserCrudController::class)->generateUrl();
 
@@ -32,11 +33,9 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
-
-        // Ajout des liens CRUD
-        yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-users', User::class);
-        yield MenuItem::linkToCrud('Menus', 'fas fa-list', Menu::class);
-
-        // Tu peux ajouter d'autres liens ici si besoin
+        yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-users', User::class)
+            ->setController(UserCrudController::class);
+        yield MenuItem::linkToCrud('Menus', 'fas fa-list', Menu::class)
+            ->setController(MenuCrudController::class);
     }
 }

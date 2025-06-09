@@ -24,6 +24,12 @@ doctrine:
                 dir: '%kernel.project_dir%/src/Entity'
                 prefix: 'App\Entity'
                 alias: App
+            Menu:  # 👈 Ton module "Menu"
+                is_bundle: false
+                type: attribute
+                dir: '%kernel.project_dir%/src/Menu/Entity'
+                prefix: 'App\Menu\Entity'
+                alias: Menu
         controller_resolver:
             auto_mapping: false
 

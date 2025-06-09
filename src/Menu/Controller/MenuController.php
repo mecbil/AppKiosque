@@ -19,7 +19,7 @@ final class MenuController extends AbstractController
     #[Route('/menu', name: 'menu_index')]
     public function index(): Response
     {
-        $menus = $this->menuRepository->findAll();
+        $menus = $this->menuRepository->findBy([], ['position' => 'ASC']);
 
         return $this->render('@menu/menu/index.html.twig', [
             'menus' => $menus,
