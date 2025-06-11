@@ -15,3 +15,9 @@ carrelage_controllers:
         path: ../src/Carrelage/Controller/
         namespace: App\Carrelage\Controller
     type: attribute
+
+rendezvous_controllers:
+    resource:
+        path: ../src/RendezVous/Controller/
+        namespace: App\RendezVous\Controller
+    type: attribute
