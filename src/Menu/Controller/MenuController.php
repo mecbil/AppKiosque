@@ -16,12 +16,12 @@ final class MenuController extends AbstractController
         $this->menuRepository = $menuRepository;
     }
 
-    #[Route('/menu', name: 'menu_index')]
+    #[Route('/menu', name: 'menu_carousel')]
     public function index(): Response
     {
         $menus = $this->menuRepository->findBy([], ['position' => 'ASC']);
 
-        return $this->render('@menu/menu/index.html.twig', [
+        return $this->render('@menu/menu/carousel.html.twig', [
             'menus' => $menus,
         ]);
     }
