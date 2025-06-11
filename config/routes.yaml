@@ -9,3 +9,9 @@ menu_controllers:
         path: ../src/Menu/Controller/
         namespace: App\Menu\Controller
     type: attribute
+
+carrelage_controllers:
+    resource:
+        path: ../src/Carrelage/Controller/
+        namespace: App\Carrelage\Controller
+    type: attribute

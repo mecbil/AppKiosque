@@ -4,6 +4,8 @@ twig:
     paths:
         '%kernel.project_dir%/src/Home/Templates': home
         '%kernel.project_dir%/src/Menu/Templates': menu
+        '%kernel.project_dir%/src/Carrelage/Templates': carrelage
+
 
 when@test:
     twig:
