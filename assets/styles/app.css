@@ -1,3 +1,9 @@
+/* Tailwind directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Feuilles de style personnalisées */
+@import "base.css";
+@import "carousel.css";
+

@@ -1,0 +1,64 @@
+/* assets/styles/carousel.css */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #222;
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scene {
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 400px;
+  perspective: 1200px;
+  cursor: grab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.scene:active {
+  cursor: grabbing;
+}
+
+.carousel {
+  width: 600px;
+  height: 400px;
+  overflow: visible;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  /* Les variables translateY et radius seront injectées dynamiquement en JS */
+}
+
+.carousel__cell {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;     /* plus large */
+  height: 150px;    /* moins haut */
+  margin: -75px -150px; /* moitié hauteur et largeur */
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  user-select: none;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+}

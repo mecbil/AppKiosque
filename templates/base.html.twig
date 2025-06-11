@@ -3,37 +3,19 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        <!-- Keen Slider CSS via CDN -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.min.css" />
+
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
-        <style>
-            /* Couleur de fond sombre */
-            body {
-                background-color: #121212;
-                color: #e0e0e0;
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 20px;
-            }
-            a {
-                color: #bb86fc;
-                text-decoration: none;
-            }
-            a:hover {
-                text-decoration: underline;
-            }
-        </style>
         {% endblock %}
-
-        {% block javascripts %}
-        <!-- Keen Slider JS via CDN -->
-        <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.min.js"></script>
-        {% endblock %}
-            {{ encore_entry_script_tags('app') }}
     </head>
+
     <body>
         {% block body %}{% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
     </body>
 </html>
