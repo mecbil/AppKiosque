@@ -7,21 +7,31 @@
 <div class="scene" id="scene">
   <div class="carousel" id="carousel">
     {% for menu in menus %}
-      <div 
-        class="carousel__cell" 
+      {% set href = '#' %} {# Valeur par défaut #}
+      {% if menu.position == 1 %}
+        {% set href = 'url_prise_de_rendez_vous' %}
+      {% elseif menu.position == 2 %}
+        {% set href = 'configuration' %}
+      {% elseif menu.position == 3 %}
+        {% set href = 'url_configuration' %}
+      {% elseif menu.position == 4 %}
+        {% set href = 'url_autre' %}
+      {% endif %}
+
+      <a href="{{ href }}" class="carousel__cell"
         style="
           transform: rotateY({{ (360 / total) * loop.index0 }}deg) translateZ({{ radius }}px);
           background-image: url('{{ vich_uploader_asset(menu, 'imageFile') }}');
+          text-decoration: none;
         "
       >
         {{ menu.label }}
-      </div>
+      </a>
     {% endfor %}
   </div>
 </div>
 
 <script>
-  // Passage des variables Twig au JS globalement
   window.carouselData = {
     total: {{ total }},
     radius: {{ radius }},

@@ -38,6 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
     startX = e.clientX;
     startTime = Date.now();
     carousel.style.transition = 'none';
+
+    // Empêche le comportement de drag par défaut sur les liens
+    if (e.target.tagName === 'A') {
+      e.preventDefault();
+    }
   });
 
   window.addEventListener('pointermove', (e) => {
