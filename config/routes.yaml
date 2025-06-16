@@ -1,23 +1,19 @@
 home_controllers:
-    resource:
-        path: ../src/Home/Controller/
-        namespace: App\Home\Controller
+    resource: ../src/Home/Controller/
     type: attribute
 
 menu_controllers:
-    resource:
-        path: ../src/Menu/Controller/
-        namespace: App\Menu\Controller
+    resource: ../src/Menu/Controller/
     type: attribute
 
 carrelage_controllers:
-    resource:
-        path: ../src/Carrelage/Controller/
-        namespace: App\Carrelage\Controller
+    resource: ../src/Carrelage/Controller/
     type: attribute
 
 rendezvous_controllers:
-    resource:
-        path: ../src/RendezVous/Controller/
-        namespace: App\RendezVous\Controller
+    resource: ../src/RendezVous/Controller/
     type: attribute
+
+catalogue_controllers:
+  resource: '../src/Catalogue/Controller/'
+  type: attribute

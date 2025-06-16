@@ -6,6 +6,7 @@ twig:
         '%kernel.project_dir%/src/Menu/Templates': menu
         '%kernel.project_dir%/src/Carrelage/Templates': carrelage
         '%kernel.project_dir%/src/RendezVous/Templates': rendezvous
+        '%kernel.project_dir%/src/Catalogue/Templates': catalogue
 
 when@test:
     twig:
