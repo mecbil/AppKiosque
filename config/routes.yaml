@@ -15,5 +15,9 @@ rendezvous_controllers:
     type: attribute
 
 catalogue_controllers:
-  resource: '../src/Catalogue/Controller/'
+  resource: ../src/Catalogue/Controller/
+  type: attribute
+
+configuration_controllers:
+  resource: ../src/Configuration/Controller/
   type: attribute
