@@ -21,3 +21,8 @@ catalogue_controllers:
 configuration_controllers:
   resource: ../src/Configuration/Controller/
   type: attribute
+
+prisederendezvous_controllers:
+  resource: ../src/prisederendezvous/Controller/
+  type: attribute
+

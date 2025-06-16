@@ -9,7 +9,7 @@
     {% for menu in menus %}
       {% set href = '#' %} {# Valeur par défaut #}
       {% if menu.position == 1 %}
-        {% set href = 'url_prise_de_rendez_vous' %}
+        {% set href = 'prisederendezvous' %}
       {% elseif menu.position == 2 %}
         {% set href = 'configuration' %}
       {% elseif menu.position == 3 %}
